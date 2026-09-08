@@ -1,3 +1,9 @@
 body{
     background-color: azure;
 }
+p{
+    color: blanchedalmond;
+    font: icon;
+    font-size: small;
+    font-weight: lighter;
+}
