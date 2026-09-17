@@ -7,3 +7,17 @@ p{
     font-size: small;
     font-weight: lighter;
 }
+.card{
+    border-radius: 6px;
+}
+.about-section{
+    background-color: honeydew;
+    color:black;
+    margin: 16px;
+    padding: 32px;
+    width: 200px;   
+}
+
+#faqs{
+    border: 4px solid cornflowerblue;
+}
