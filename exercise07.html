@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <title>my test page</title>
+        <link href="style.css" rel="stylesheet" />
+    </head>
+    <body>
+
+        <h1>library events</h1>
+  
+        <table>
+            <caption> Upcoming Programs  </caption>
+            <thead>
+                <tr>
+                    <td>progam</td>
+                    <td>date</td>
+                    <td>time</td>
+                    <td>location</td>
+                </tr>
+            </thead>
+            <tbody>
+                 <tr>
+                    <td>book club</td>
+                    <td>oct. 8</td>
+                    <td>6:30pm</td>
+                    <td>room a</td>
+                </tr>
+                 <tr>
+                    <td>story time</td>
+                    <td>oct. 10</td>
+                    <td>10:00 am</td>
+                    <td>children's</td>
+                </tr>
+                 <tr>
+                    <td>genealogy</td>
+                    <td>oct. 12</td>
+                    <td>2:00pm</td>
+                    <td>room b</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2> register </h2>
+        <form>
+            <div>
+                <label for="name"> your name</label>
+                <input type="text" name="name" placeholder="your name">
+            </div>
+             <div>
+                <label for="email"> your email</label>
+                <input type="email" name="email" placeholder="your email">
+            </div>
+            <div>
+                <label for="progam">slect a progam</label>
+                <select name="progam">
+                    <option value="book club">book club</option>
+                    <option value="story-time">story time</option>
+                    <option value="genealogy">genealogy</option>
+                </select>
+             </div> 
+             <div>
+                <input type="radio" value="in-person" name="in-person">
+                <label for="in-person">in-person</label>
+             </div>
+            <div>
+                <input type="radio" value="online" name="online">
+                <label for="online">online</label>
+             </div>
+             <div>
+                <input type="submit" value="register">
+             </div>
+        </form>
+
+    </body>
+</html>
