@@ -47,7 +47,7 @@ p{
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   margin: 0;
 }
 header {
@@ -68,4 +68,12 @@ article {
   margin: 10px;
   background-color: lightblue;
 }
-/* Add your flexbox CSS below here */
+body {
+  font-family: 'Times New Roman', Times, serif;
+}
+.container > div {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: cornsilk;
+  border: 2px solid rgb(211, 233, 241);
+}
