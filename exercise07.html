@@ -1,76 +1,136 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="utf-8" />
-        <title>my test page</title>
-        <link href="style.css" rel="stylesheet" />
-    </head> 
-    <body>
+<head>
+    <meta charset="utf-8" />
+    <title>Library Events & Registration</title>
+    
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link href="style.css" rel="stylesheet" />
+</head> 
+<body>
 
-        <h1>library events </h1> 
-  
-        <table id="library-name">
-            <caption> Upcoming Programs  </caption>
-            <thead>
-                <tr>
-                    <td>progam</td>
-                    <td>date</td>
-                    <td>time</td>
-                    <td>location</td>
-                </tr>
-            </thead>
-            <tbody>
-                 <tr>
-                    <td>book club</td>
-                    <td>oct. 8</td>
-                    <td>6:30pm</td>
-                    <td>room a</td>
-                </tr>
-                 <tr>
-                    <td>story time</td>
-                    <td>oct. 10</td>
-                    <td>10:00 am</td>
-                    <td>children's</td>
-                </tr>
-                 <tr>
-                    <td>genealogy</td>
-                    <td>oct. 12</td>
-                    <td>2:00pm</td>
-                    <td>room b</td>
-                </tr>
-            </tbody>
-        </table>
+    <header class="site-header">
+        <div class="header-titles">
+            <h1>Library Events</h1> 
+            <p>Community events, workshops, and activities</p>
+        </div>
+      
+        <nav class="nav-box" aria-label="Main Website Navigation Links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Programs</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <h2> register </h2>
-        <form>
-            <div>
-                <label for="name"> your name</label>
-                <input type="text" name="name" placeholder="your name">
-            </div>
-             <div>
-                <label for="email"> your email</label>
-                <input type="email" name="email" placeholder="your email">
-            </div>
-            <div>
-                <label for="progam">slect a progam</label>
-                <select name="progam">
-                    <option value="book club">book club</option>
-                    <option value="story-time">story time</option>
-                    <option value="genealogy">genealogy</option>
-                </select>
-             </div> 
-             <div>
-                <input type="radio" value="in-person" name="in-person">
-                <label for="in-person">in-person</label>
-             </div>
-            <div>
-                <input type="radio" value="online" name="online">
-                <label for="online">online</label>
-             </div>
-             <div>
-                <input type="submit" value="register">
-             </div>
-        </form>
 
-    </body>
+    <div class="main-layout-wrapper">
+        
+
+        <main class="content-column">
+            <section class="layout-card">
+                <table id="library-name">
+                    <caption>Upcoming Programs</caption>
+                    <thead>
+                        <tr>
+                       
+                            <th scope="col">Program</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Time</th>
+                            <th scope="col">Location</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                         <tr>
+                            <td><strong>Book Club</strong></td>
+                            <td>Oct. 8</td>
+                            <td>6:30pm</td>
+                            <td>Room A</td>
+                        </tr>
+                         <tr>
+                            <td><strong>Story Time</strong></td>
+                            <td>Oct. 10</td>
+                            <td>10:00 am</td>
+                            <td>Children's Room</td>
+                        </tr>
+                         <tr>
+                            <td><strong>Genealogy</strong></td>
+                            <td>Oct. 12</td>
+                            <td>2:00pm</td>
+                            <td>Room B</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+      
+        <aside class="sidebar-column">
+         
+            <section class="layout-card">
+                <h2>Register</h2>
+                <p class="sidebar-subtitle">Choose a program to attend.</p>
+                <form class="registration-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="user-name">Your Name</label>
+                        <input type="text" id="user-name" name="name" class="form-control" placeholder="Your name" required>
+                    </div>
+                     <div class="form-group">
+                        <label for="user-email">Your Email</label>
+                        <input type="email" id="user-email" name="email" class="form-control" placeholder="Your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="selected-program">Select a Program</label>
+                        <select id="selected-program" name="program" class="form-control" required>
+                            <option value="" disabled selected>Select a program</option>
+                            <option value="book club">Book Club</option>
+                            <option value="story-time">Story Time</option>
+                            <option value="genealogy">Genealogy</option>
+                        </select>
+                     </div> 
+                    
+                     <fieldset class="radio-fieldset">
+                        <legend>Attendance Mode</legend>
+                        <div class="radio-option">
+                            <input type="radio" id="mode-in-person" value="in-person" name="attendanceMode" checked>
+                            <label for="mode-in-person">In person</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="mode-online" value="online" name="attendanceMode">
+                            <label for="mode-online">Online</label>
+                        </div>
+                     </fieldset>
+                     
+                     <div>
+                        <input type="submit" value="Register" class="submit-button">
+                     </div>
+                </form>
+            </section>
+
+            <section class="layout-card info-callout-box">
+                <h2>Program Notes</h2>
+                <div class="info-content-group">
+                    <p>Additional information about registration thresholds, event accessibility, target age ranges, or hours.</p>
+                    <p style="margin-top: 10px;"><strong>Hours:</strong> Mon-Fri 9AM-8PM, Sat 10AM-5PM</p>
+                </div>
+            </section>
+        </aside>
+
+    </div>
+    
+    <footer class="site-footer">
+        <div class="footer-top">
+            Metropolitan Public Library &bull; 100 Library Lane &bull; Phone: (555) 012-3456
+        </div>
+        <div class="footer-bottom">
+            Site Directory / Accessibility Information / Terms of Service
+        </div>
+    </footer>
+
+</body>
 </html>
