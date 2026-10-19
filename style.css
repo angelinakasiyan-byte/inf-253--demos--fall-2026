@@ -262,53 +262,63 @@ h2 {
   font-weight: 500;
 }
 
-.container{
-  background-color: #ffffff;
+.container {
+  background-color: darkslategrey;
   padding: 12px;
   margin: 0 auto;
   max-width: 98%;
   box-sizing: border-box;
 }
-#main-navigation ul {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    list-style: none;
-    margin: 36px;
-    padding: 0;
+
+.nav-box ul {
+  display: flex;
+  flex-direction: column; 
+  gap: 8px;
+  list-style: none;
+  margin: 36px;
+  padding: 0;
 }
 
-@madia all and (min-width: 375px) {
-
+.main-layout-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-@madia all and (min-width: 768px) {
-  #main-navigation ul {
-    flex-direction: row;
+.content-column .layout-card {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#library-name {
+  width: 100%;
+  min-width: 500px; 
+}
+
+@media all and (min-width: 768px) {
+  .nav-box ul {
+    flex-direction: row; 
     gap: 12px;
-    justify-conetnt: center;
+    justify-content: center;
+  }
+  .main-layout-wrapper {
+    flex-direction: row;
+    column-gap: 60px;
+  }
+
+  .content-column {
+    flex: 1; 
+  }
+
+  .sidebar-column {
+    width: 280px;
+    flex-shrink: 0;
+  }
 }
-@madia all and (min-width: 12000px) {
-  .container{
+
+@media all and (min-width: 1200px) {
+  .container {
     width: 960px;
     padding: 18px 54px;
   }
-  
-  main {
-    display: flex;
-    colum-gap: 60px;
-  }
-}
-main{
-  display:flex;
-  column-gap: 60px;
-}
-main article{
-  width: calc(100%- 280px - 60px);
-}
-main article table {
-  width: 100%;
-}
-main aside {
-  width: 280px;
 }

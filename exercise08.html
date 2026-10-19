@@ -1,36 +1,130 @@
 <!DOCTYPE html>
-<html lang=""en-US">
+<html lang="en-US">
 <head>
-    <meta charset=""uf-8" />
-     <meta name="viewport" content="width=device-width, inital-scale=1.0">
-    <title>My test page</title>
-    <link href="style.css" rel="stylesheet" />
-    </head>
-    <body>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <title>Library Events & Registration</title>
+    
 
-        <nav id="main-navigation">
-            <ul>  
-                <li><a alt="go to exercise02" href="exercise02.html">exercise02</a></li>
-                <li><a alt="go to exercise03" href="exercise03.html">exercise03</a></li>
-                <li><a alt="go to exercise04" href="exercise04.html">exercise04</a></li>
-                <li><a alt="go to dominican university" href="https://www.dom.edu/">go to dominican university</a></li>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link href="style.css" rel="stylesheet" />
+</head> 
+<body>
+
+    <header class="site-header">
+        <div class="header-titles">
+            <h1>Library Events</h1> 
+            <p>Community events, workshops, and activities</p>
+        </div>
+        <nav class="nav-box" aria-label="Main Website Navigation Links">
+            <ul>
+                <li><a href="#">home about progams </a></li>
             </ul>
         </nav>
+    </header>
 
-        <section class="about-section card" id="about-us">
-           <h2> Section One </h2>
-           <p>This is paragrpah for the frist section.</p>
-        </section>
   
-        <section class="about-section card" id=" meet the staff">
-            <h2> Section Two</h2>
-            <p> This is paragraph for section two</p>
-        </section>
+    <div class="main-layout-wrapper">
+    
+        <main class="content-column">
+            
+            <!-- Upcoming Programs Table Block -->
+            <section class="layout-card">
+                <table id="library-name">
+                    <caption>Upcoming Programs</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Program</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Time</th>
+                            <th scope="col">Location</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                         <tr>
+                            <td><strong>Book Club</strong></td>
+                            <td>Oct. 8</td>
+                            <td>6:30pm</td>
+                            <td>Room A</td>
+                        </tr>
+                         <tr>
+                            <td><strong>Story Time</strong></td>
+                            <td>Oct. 10</td>
+                            <td>10:00 am</td>
+                            <td>Children's Room</td>
+                        </tr>
+                         <tr>
+                            <td><strong>Genealogy</strong></td>
+                            <td>Oct. 12</td>
+                            <td>2:00pm</td>
+                            <td>Room B</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
-        <section class="about-section card" id="faqs">
-            <h2> Section Three</h2>
-            <p>This is paragraph for section three</p>
-        </section>
+        
+            <section class="layout-card">
+                <h2>About these programs</h2>
+                <div class="info-callout-box">
+                    <p>about programs here.</p>
+                </div>
+            </section>
+            
+        </main>
 
- </body>
+        <aside class="sidebar-column">
+            
+        
+            <section class="layout-card">
+                <h2>Register</h2>
+                <p class="sidebar-subtitle">Choose a program to attend.</p>
+                <form class="registration-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="user-name">Your Name</label>
+                        <input type="text" id="user-name" name="name" class="form-control" placeholder="Your name" required>
+                    </div>
+                     <div class="form-group">
+                        <label for="user-email">Your Email</label>
+                        <input type="email" id="user-email" name="email" class="form-control" placeholder="Your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="selected-program">Select a Program</label>
+                        <select id="selected-program" name="program" class="form-control" required>
+                            <option value="" disabled selected>Select a program</option>
+                            <option value="book club">Book Club</option>
+                            <option value="story-time">Story Time</option>
+                            <option value="genealogy">Genealogy</option>
+                        </select>
+                     </div> 
+                     
+                     <fieldset class="radio-fieldset">
+                        <legend>Attendance Mode</legend>
+                        <div class="radio-option">
+                            <input type="radio" id="mode-in-person" value="in-person" name="attendanceMode" checked>
+                            <label for="mode-in-person">In person</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="mode-online" value="online" name="attendanceMode">
+                            <label for="mode-online">Online</label>
+                        </div>
+                     </fieldset>
+                     
+                     <div>
+                        <input type="submit" value="Register" class="submit-button">
+                     </div>
+                </form>
+            </section>
+
+           
+    <footer class="site-footer">
+        <div class="footer-top">
+             Public Library  100 Library Lane ; Phone #
+        </div>
+    </footer>
+
+</body>
 </html>
