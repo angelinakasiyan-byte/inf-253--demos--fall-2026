@@ -194,10 +194,11 @@ h2 {
   margin-bottom: 15px;
 }
 
-.registration-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.registration-form .form-control:focus {
+    outline: none; 
+    border-color: #0056b3; 
+    box-shadow: 0 0 0 4px rgba(0, 86, 179, 0.25); 
+    background-color: #fffdf0; 
 }
 
 .form-group {
@@ -251,10 +252,10 @@ h2 {
   transition: background-color 0.2s;
 }
 
-.submit-button:hover,
 .submit-button:focus {
-  background-color: #1e3a8a; 
-  outline: none;
+    outline: 3px solid #0056b3;
+    outline-offset: 3px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
 }
 
 .footer-top {
@@ -263,7 +264,8 @@ h2 {
 }
 
 .container {
-  background-color: darkslategrey;
+  background-color: #233d3d; 
+  color: #ffffff;           
   padding: 12px;
   margin: 0 auto;
   max-width: 98%;
