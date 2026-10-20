@@ -309,12 +309,20 @@ h2 {
   color: #000000;                     /* Shifts text to pure high-contrast black */
 }
 
-@media all and (min-width: 768px) {
+@media all and (min-width: 768px) 
+{
   .nav-box ul {
-    flex-direction: row; 
-    gap: 12px;
+    flex-direction: row;     /* Flattens smoothly into a clean horizontal row */
+    gap: 16px;               /* Ample separation space for desktop cursors */
     justify-content: center;
+    max-width: 100%;
   }
+
+  .nav-box a {
+    display: inline-block;
+    min-width: 120px;        /* Ensures balanced uniform button sizes */
+  }
+}
   .main-layout-wrapper {
     flex-direction: row;
     column-gap: 60px;
