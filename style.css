@@ -292,9 +292,21 @@ h2 {
   -webkit-overflow-scrolling: touch;
 }
 
-#library-name {
-  width: 100%;
-  min-width: 500px; 
+#library-name tbody tr {
+  position: relative;
+  transition: all 0.15s ease-in-out;
+  border-left: 4px solid transparent; /* Hidden spacer to prevent layout shifting on hover */
+}
+
+#library-name tbody tr:hover {
+  background-color: #e6f2f2;         /* Slightly deeper blue-grey highlight tint */
+  border-left: 4px solid #0056b3;    /* Sharp, vivid blue anchor line matching your focus indicators */
+  transform: scaleX(1.005);          /* Micro-scale lift to make the active row physically stand out */
+}
+
+/* Make text inside the hovered row pop clearly */
+#library-name tbody tr:hover td {
+  color: #000000;                     /* Shifts text to pure high-contrast black */
 }
 
 @media all and (min-width: 768px) {
@@ -323,19 +335,4 @@ h2 {
     width: 960px;
     padding: 18px 54px;
   }
-}
-#library-name tbody tr {
-  position: relative;
-  transition: all 0.15s ease-in-out;
-  border-left: 4px solid transparent;
-}
-
-#library-name tbody tr:hover {
-  background-color: #e6f2f2;       
-  border-left: 4px solid #0056b3;    
-  transform: scaleX(1.005);          
-}
-
-#library-name tbody tr:hover td {
-  color: #000000;                    
 }
