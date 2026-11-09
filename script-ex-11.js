@@ -4,10 +4,11 @@ const details  = document.querySelectorAll(".progams-details");
 
 
 buttons.forEach( function(button) {
-  
-  button.addEventListener("click" , function() {
+  console.log(buttons);
 
     console.log(button.dataset.target + " was clicked!");
+
+     button.addEventListener("click" , function() {
 
     //hide all details divs
     details.forEach(function(item) {
