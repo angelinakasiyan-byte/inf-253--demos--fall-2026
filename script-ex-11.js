@@ -1,6 +1,6 @@
-const button = document.querySelectorAll("details-button");
+const button = document.querySelectorAll(".details-button");
 
-const details  = document.querySelectorAll("progams-details");
+const details  = document.querySelectorAll(".progams-details");
 
 
 button.forEach( function(button) {
