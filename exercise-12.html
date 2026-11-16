@@ -2,13 +2,12 @@
 <html lang="en-US">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library Events & Registration</title>
     
-
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <link href="style.css" rel="stylesheet" />
 </head> 
@@ -21,18 +20,18 @@
         </div>
         <nav class="nav-box" aria-label="Main Website Navigation Links">
             <ul>
-                <li><a href="#">home about progams </a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Programs</a></li>
             </ul>
         </nav>
     </header>
 
-  
     <div class="main-layout-wrapper">
         
         <div hidden id="confirmation-message"></div>
 
         <main class="content-column">
-        
             <!-- Upcoming Programs Table Block -->
             <section class="layout-card">
                 <table id="library-name">
@@ -43,83 +42,80 @@
                             <th scope="col">Date</th>
                             <th scope="col">Time</th>
                             <th scope="col">Location</th>
-                            <th scope="col"><Details></th>
+                            <th scope="col">Details</th>
                         </tr>
                     </thead>
                     <tbody>
-                         <tr>
+                        <tr>
                             <td>Book Club</td>
                             <td>Oct. 8</td>
                             <td>6:30pm</td>
                             <td>Room A</td>
-                             <td><button type="button" class="details-button" data-target="Book Club"> View Details</button></td>
+                            <td><button type="button" class="details-button" data-target="Book Club">View Details</button></td>
                         </tr>
-                         <tr>
-                           <td>Story Time</td>
+                        <tr>
+                            <td>Story Time</td>
                             <td>Oct. 10</td>
                             <td>10:00 am</td>
                             <td>Children's Room</td>
-                            <td><button type="button" class="details-button" data-target="Story Time"> View Details</button></td>
+                            <td><button type="button" class="details-button" data-target="Story Time">View Details</button></td>
                         </tr>
-                         <tr>
+                        <tr>
                             <td>Genealogy</td>
                             <td>Oct. 12</td>
                             <td>2:00pm</td>
                             <td>Room B</td>
-                            <td><button type="button" class="details-button" data-target="Genealogy"> View Details</button></td>
+                            <td><button type="button" class="details-button" data-target="Genealogy">View Details</button></td>
                         </tr>
                     </tbody>
                 </table>
             </section>
 
-        
             <section class="layout-card">
                 <h2>About these programs</h2>
                 <div class="info-callout-box">
-                    <p>about programs here.</p>
+                    <p>About programs here.</p>
+                </div>
                 <div id="Book Club" class="progams-details" hidden>
                     <h3>Book Club Details</h3>
                     <p>Some details about this event...</p>
-                  </div>
-               <div id="Story Time" class="progams-details" hidden>
+                </div>
+                <div id="Story Time" class="progams-details" hidden>
                     <h3>Story Time Details</h3>
                     <p>Some details about this event...</p>
-                 </div>
-               <div id="Genealogy" class="progams-details" hidden>
+                </div>
+                <div id="Genealogy" class="progams-details" hidden>
                     <h3>Genealogy Details</h3>
                     <p>Some details about this event...</p>
                 </div>
             </section>
-            
         </main>
 
         <aside class="sidebar-column">
-            
-        
             <section class="layout-card">
                 <h2>Register</h2>
-                <form id="registration-form">
                 <p class="sidebar-subtitle">Choose a program to attend.</p>
-                <form class="registration-form" action="#" method="POST">
+                
+                <form id="registration-form" class="registration-form" action="#" method="POST">
                     <div class="form-group">
                         <label for="user-name">Your Name</label>
-                        <input type="text" id="user-name" name="name" class="form-control" placeholder="Your name" id="registration-name" required>
+                        <input type="text" id="user-name" name="name" class="form-control" placeholder="Your name" required>
                     </div>
-                     <div class="form-group">
+                    <div class="form-group">
                         <label for="user-email">Your Email</label>
                         <input type="email" id="user-email" name="email" class="form-control" placeholder="Your email" required>
                     </div>
                     <div class="form-group">
                         <label for="selected-program">Select a Program</label>
-                        <select id="selected-program" name="program" class="form-control" id="registration-program" required>
+                        <select id="selected-program" name="program" class="form-control" required>
                             <option value="" disabled selected>Select a program</option>
                             <option value="Book Club">Book Club</option>
                             <option value="Story Time">Story Time</option>
                             <option value="Genealogy">Genealogy</option>
                         </select>
-                     </div> 
+                    </div> 
                      
-                     <fieldset class="radio-fieldset">
+                    <fieldset class="radio-fieldset">
                         <legend>Attendance Mode</legend>
                         <div class="radio-option">
                             <input type="radio" id="mode-in-person" value="in-person" name="attendanceMode" checked>
@@ -129,21 +125,23 @@
                             <input type="radio" id="mode-online" value="online" name="attendanceMode">
                             <label for="mode-online">Online</label>
                         </div>
-                     </fieldset>
+                    </fieldset>
                      
-                     <div>
+                    <div>
                         <input type="submit" value="Register" class="submit-button">
-                     </div>
+                    </div>
                 </form>
             </section>
+        </aside>
 
-           
+    </div>
+
     <footer class="site-footer">
         <div class="footer-top">
-             Public Library  100 Library Lane ; Phone #
+            Public Library &bull; 100 Library Lane &bull; Phone #
         </div>
-         <script src="./script-ex-12.js"></script>
     </footer>
 
+    <script src="./script-ex-12.js"></script>
 </body>
 </html>
