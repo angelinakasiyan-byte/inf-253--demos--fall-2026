@@ -344,7 +344,9 @@ h2 {
     padding: 18px 54px;
   }
 }
-
+.confirmation-box[hidden] {
+    display: none;
+}
 #confirmation-message {
   background-color: #e0f2fe;  
   border-left: 4px solid #3b82f6; 
