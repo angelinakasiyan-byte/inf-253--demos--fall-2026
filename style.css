@@ -344,3 +344,12 @@ h2 {
     padding: 18px 54px;
   }
 }
+
+#confirmation-message {
+  background-color: #e0f2fe;  
+  border-left: 4px solid #3b82f6; 
+  padding: 15px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #1e3a8a;
+}
