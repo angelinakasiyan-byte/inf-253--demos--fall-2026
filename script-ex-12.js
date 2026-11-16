@@ -1,44 +1,38 @@
 const buttons = document.querySelectorAll(".details-button");
-const details  = document.querySelectorAll(".progams-details");
+const details = document.querySelectorAll(".progams-details");
 
+buttons.forEach(function (button) {
+  button.addEventListener("click", function () {
+    const target = button.dataset.target;
+    console.log(target + " was clicked!");
 
-
-buttons.forEach( function(button) {
-  console.log(buttons);
-
-    console.log(button.dataset.target + " was clicked!");
-
-     button.addEventListener("click" , function() {
-
-    //hide all details divs
-    details.forEach(function(item) {
+    // Hide all details divs
+    details.forEach(function (item) {
       item.hidden = true;
     });
 
-    //find and show the relevant program details
-    const target = button.dataset.target;
-    document.getElementById(target).hidden = false;
+    // Find and show the relevant program details
+    const targetElement = document.getElementById(target);
+    if (targetElement) {
+      targetElement.hidden = false;
+    }
   });
-
 });
+
 const form = document.querySelector("#registration-form");
+const confirmation = document.querySelector("#confirmation-message");
 
-    const confirmation = document.querySelector("#confirmation-message");
-
-    console.log(confirmation);
-
-form.addEventListener("submit", function(event) {
-
-
+if (form & confirmation) {
+  form.addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent the form from submitting normally
 
     const name = document.querySelector("#registration-name").value;
     const program = document.querySelector("#registration-program").value;
+    const mode = document.querySelector('input[name="attendanceMode"]:checked').value;
 
-    const message = `Thank you, ${name}, for registering for the ${program} program!`;
-
-    console.log(message);
+    const message = `Thank you, ${name}, for registering for the ${program} program (${mode})!`;
 
     confirmation.textContent = message;
     confirmation.hidden = false; // Show the confirmation message
-});
+    form.reset(); // Optional: clears the form after submission
+  });
