@@ -11,6 +11,9 @@
     
     <link href="style.css" rel="stylesheet" />
 </head> 
+<div id="confirmation-message" class="confirmation-box" hidden>
+    <p>Thank you, <span id="confirm-name"></span>, for registering! Your spot has been reserved.</p>
+</div>
 <body>
 
     <header class="site-header">
@@ -29,7 +32,9 @@
 
     <div class="main-layout-wrapper">
         
-        <div hidden id="confirmation-message"></div>
+        <div hidden id="confirmation-message">
+            Thank you, <span id="confirm-name"></span>, for registering! Your spot has been reserved.
+        </div>
 
         <main class="content-column">
             <!-- Upcoming Programs Table Block -->
@@ -98,16 +103,16 @@
                 
                 <form id="registration-form" class="registration-form" action="#" method="POST">
                     <div class="form-group">
-                        <label for="user-name">Your Name</label>
-                        <input type="text" id="user-name" name="name" class="form-control" placeholder="Your name" required>
+                        <label for="registration-name">Your Name</label>
+                        <input type="text" id="registration-name" name="name" class="form-control" placeholder="Your name" required>
                     </div>
                     <div class="form-group">
                         <label for="user-email">Your Email</label>
                         <input type="email" id="user-email" name="email" class="form-control" placeholder="Your email" required>
                     </div>
                     <div class="form-group">
-                        <label for="selected-program">Select a Program</label>
-                        <select id="selected-program" name="program" class="form-control" required>
+                        <label for="registration-program">Select a Program</label>
+                        <select id="registration-program" name="program" class="form-control" required>
                             <option value="" disabled selected>Select a program</option>
                             <option value="Book Club">Book Club</option>
                             <option value="Story Time">Story Time</option>

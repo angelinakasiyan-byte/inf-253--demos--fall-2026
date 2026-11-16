@@ -4,14 +4,13 @@ const details = document.querySelectorAll(".progams-details");
 buttons.forEach(function (button) {
   button.addEventListener("click", function () {
     const target = button.dataset.target;
-    console.log(target + " was clicked!");
 
-    // Hide all details divs
+    // Hide all details divs first
     details.forEach(function (item) {
       item.hidden = true;
     });
 
-    // Find and show the relevant program details
+    // Show the specific program details div that matches data-target
     const targetElement = document.getElementById(target);
     if (targetElement) {
       targetElement.hidden = false;
@@ -19,20 +18,23 @@ buttons.forEach(function (button) {
   });
 });
 
+// 2. Handle the Registration Form submission
 const form = document.querySelector("#registration-form");
 const confirmation = document.querySelector("#confirmation-message");
+const confirmName = document.querySelector("#confirm-name");
 
-if (form & confirmation) {
+if (form && confirmation && confirmName) {
   form.addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent the form from submitting normally
+    event.preventDefault(); // Stops the page from reloading
 
+    // Get the name typed into the input field and put it into the <span>
     const name = document.querySelector("#registration-name").value;
-    const program = document.querySelector("#registration-program").value;
-    const mode = document.querySelector('input[name="attendanceMode"]:checked').value;
+    confirmName.textContent = name;
 
-    const message = `Thank you, ${name}, for registering for the ${program} program (${mode})!`;
+    // Reveal the hidden confirmation <div>
+    confirmation.hidden = false;
 
-    confirmation.textContent = message;
-    confirmation.hidden = false; // Show the confirmation message
-    form.reset(); // Optional: clears the form after submission
+    // Clear the form fields
+    form.reset();
   });
+}
